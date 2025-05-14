@@ -10,9 +10,12 @@ setInterval(() => {
 function displayDate() {
   const date = new Date();
   const sec = date.getSeconds();
+
+  secHand.style.transform = `rotate(${(sec / 60) * 360 + 90}deg)`;
+
   const min = date.getMinutes();
+  minHand.style.transform = `rotate(${(min / 60) * 360 + 90}deg)`;
+
   const hour = date.getHours();
-  secHand.style.transform = `rotate(${90 + 6 * sec}deg)`;
-  minHand.style.transform = `rotate(${90 + 6 * min}deg)`;
-  hourHand.style.transform = `rotate(${90 + (360 / 24) * hour}deg)`;
+  hourHand.style.transform = `rotate(${(hour / 12) * 360 + 90}deg)`;
 }
