@@ -2,6 +2,7 @@ const secHand = document.querySelector('.second-hand');
 const minHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
 const audio = document.querySelector('audio');
+const video = document.querySelector('video');
 displayDate(); // ignore the layout freez when first open the app
 
 setInterval(() => {
@@ -20,7 +21,12 @@ function displayDate() {
 
   const hour = date.getHours();
   hourHand.style.transform = `rotate(${(hour / 12) * 360 + 90}deg)`;
+  console.log(sec, min, hour);
   if (hour === 0 || hour === 24) {
-    audio.play();
+    video.classList.add('show');
+    video.play();
+  }
+  if (video.ended) {
+    video.classList.remove('show');
   }
 }
