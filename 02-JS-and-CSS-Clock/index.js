@@ -21,7 +21,8 @@ function displayDate() {
 
   const hour = date.getHours();
   hourHand.style.transform = `rotate(${(hour / 12) * 360 + 90}deg)`;
-  if (hour === 0 || hour === 24) {
+
+  if ((hour === 0 || hour === 24) && min === 0) {
     video.classList.add('show');
     video.play();
   }
