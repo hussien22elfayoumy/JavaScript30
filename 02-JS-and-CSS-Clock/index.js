@@ -25,7 +25,7 @@ function displayDate() {
   //   video.classList.add('show');
   //   video.play();
   // }
-  if (sec === 30) {
+  if (sec === 15) {
     video.classList.add('show');
     video.play();
   }
