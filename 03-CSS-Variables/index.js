@@ -12,5 +12,5 @@ const handleChange = function () {
 };
 
 inputs.forEach((input) => {
-  input.addEventListener('change', handleChange);
+  input.addEventListener('input', handleChange); // updated for input for live updated unlike the `change` event
 });
