@@ -7,3 +7,7 @@
 ### Day 2 => JS and CSS Clock
 
 [live Demo](https://hussien22elfayoumy.github.io/JavaScript30/02-JS-and-CSS-Clock/)
+
+### Day 3 => Css Varibles
+
+[live Demo](https://hussien22elfayoumy.github.io/JavaScript30/03-CSS-Variables/)
