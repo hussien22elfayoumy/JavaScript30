@@ -1,22 +1,16 @@
-const spacingInput = document.querySelector('input[name="spacing"]');
-const blurInput = document.querySelector('input[name="blur"]');
-const baseInput = document.querySelector('input[name="base"]');
+const inputs = document.querySelectorAll('.controls input');
 
-const root = document.querySelector(':root');
+const handleChange = function () {
+  //Get the suffix for each value (e.g., 'px' or '%') from the data-sizing attribute
+  const suffix = this.dataset.sizing || ''; // `this` refers to the input element that triggered the event
 
-spacingInput.addEventListener('change', (e) => {
-  console.log(e.target.value);
+  // Change the css variables
+  document.documentElement.style.setProperty(
+    `--${this.name}`,
+    `${this.value}${suffix}`
+  );
+};
 
-  root.style.setProperty('--spacing', `${e.target.value}px`);
-});
-
-blurInput.addEventListener('change', (e) => {
-  console.log(e.target.value);
-
-  root.style.setProperty('--blur', `${e.target.value}px`);
-});
-
-baseInput.addEventListener('change', (e) => {
-  console.log(e.target.value);
-  root.style.setProperty('--base', `${e.target.value}`);
+inputs.forEach((input) => {
+  input.addEventListener('change', handleChange);
 });
