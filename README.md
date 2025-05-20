@@ -15,3 +15,7 @@
 ### Day 5 => Flex Panel Gallery
 
 [live Demo](https://hussien22elfayoumy.github.io/JavaScript30/05-Flex-Panel-Gallery/)
+
+### Day 6 => Ajax Type Ahead Search
+
+[live Demo](https://hussien22elfayoumy.github.io/JavaScript30/06-Ajax-Type-Ahead-Search/)
