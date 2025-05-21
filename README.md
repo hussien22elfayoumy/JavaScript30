@@ -19,3 +19,7 @@
 ### Day 6 => Ajax Type Ahead Search
 
 [live Demo](https://hussien22elfayoumy.github.io/JavaScript30/06-Ajax-Type-Ahead-Search/)
+
+### Day 8 => Fun with HTML5 Canvas
+
+[live Demo](https://hussien22elfayoumy.github.io/JavaScript30/08-Fun-with-HTML5-Canvas/)
