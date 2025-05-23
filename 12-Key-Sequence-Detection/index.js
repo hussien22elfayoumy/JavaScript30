@@ -19,13 +19,11 @@ window.addEventListener('click', () => {
   input.focus();
 });
 
-// Listen to input value (mobile-friendly)
 input.addEventListener('input', (e) => {
-  const val = e.target.value.toLowerCase(); // normalize case
+  const val = e.target.value.toLowerCase();
   pressedKeys.push(...val);
-  e.target.value = ''; // reset to keep it clean for next key
+  e.target.value = '';
 
-  // Keep array length trimmed
   if (pressedKeys.length > magicWord.length) {
     pressedKeys.splice(0, pressedKeys.length - magicWord.length);
   }
@@ -35,6 +33,6 @@ input.addEventListener('input', (e) => {
     jsConfetti.addConfetti({
       emojis: ['🐱', '⚡️', '💥', '✨', '💫', '🌸', '🐱', '🐱'],
     });
-    pressedKeys.length = 0; // reset
+    pressedKeys.length = 0;
   }
 });

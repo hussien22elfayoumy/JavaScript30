@@ -21,6 +21,7 @@
       color: #eee;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
@@ -31,17 +32,18 @@
       padding: 20px;
     }
     input {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 1px;
-      height: 1px;
-      opacity: 0.01;
+      position: absolute;
+      inset: 0;
       z-index: -1;
+      background-color: #111;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      outline: none;
     }
   </style>
   <body>
     <h1>Tap and Guess The Secret Word, Watch Magic</h1>
-    <input id="hiddenInput" type="text" />
+    <input id="hiddenInput" autocomplete="off" type="text" />
   </body>
 </html>
