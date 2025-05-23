@@ -15,22 +15,26 @@ const magicWord = 'cat';
   }
 }); */
 
-input.addEventListener('input', (e) => {
-  console.log(e.target.value);
-  pressedKeys.push(e.target.value);
-  pressedKeys.splice(
-    -(magicWord.length - 1),
-    pressedKeys.length - magicWord.length
-  );
-  if (pressedKeys.join('').includes(magicWord)) {
-    e.target.value = '';
-    // cornify_add();
-    const jsConfetti = new JSConfetti();
+window.addEventListener('click', () => {
+  input.focus();
+});
 
+// Listen to input value (mobile-friendly)
+input.addEventListener('input', (e) => {
+  const val = e.target.value.toLowerCase(); // normalize case
+  pressedKeys.push(...val);
+  e.target.value = ''; // reset to keep it clean for next key
+
+  // Keep array length trimmed
+  if (pressedKeys.length > magicWord.length) {
+    pressedKeys.splice(0, pressedKeys.length - magicWord.length);
+  }
+
+  if (pressedKeys.join('').includes(magicWord)) {
+    const jsConfetti = new JSConfetti();
     jsConfetti.addConfetti({
       emojis: ['🐱', '⚡️', '💥', '✨', '💫', '🌸', '🐱', '🐱'],
     });
+    pressedKeys.length = 0; // reset
   }
 });
-
-window.addEventListener('click', () => input.focus());
