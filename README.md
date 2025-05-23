@@ -34,4 +34,4 @@
 
 ### Key Squence Detection (Guess the word)
 
-[live Demo](https://hussien22elfayoumy.github.io/JavaScript30/11-Custom-Video-Player/)
+[live Demo](https://hussien22elfayoumy.github.io/JavaScript30/12-Key-Sequence-Detection/)
