@@ -35,3 +35,7 @@
 ### Key Squence Detection (Guess the word)
 
 [live Demo](https://hussien22elfayoumy.github.io/JavaScript30/12-Key-Sequence-Detection/)
+
+### Slide in on Scroll
+
+[live Demo](https://hussien22elfayoumy.github.io/JavaScript30/13-Slide-in-on-Scroll/)
