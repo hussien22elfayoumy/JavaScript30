@@ -39,3 +39,7 @@
 ### Slide in on Scroll
 
 [live Demo](https://hussien22elfayoumy.github.io/JavaScript30/13-Slide-in-on-Scroll/)
+
+### LocalSotrage Simple Checklist
+
+[live Demo](https://hussien22elfayoumy.github.io/JavaScript30/15-LocalStorage/)
